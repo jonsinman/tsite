@@ -1,0 +1,1616 @@
+/*
+Theme Name:     Jupiter Child Theme
+Theme URI: 		http://demos.artbees.net/jupiter5
+Description:    Child theme for the Jupiter theme 
+Author:         Your name here
+Theme URI: 		http://themeforest.net/user/artbees
+Template:       jupiter
+Version:        5.0.0    
+Text Domain: mk_framework
+Domain Path: /languages/
+*/
+
+
+/*
+darker red: #a41624
+atg red: #C30E2E
+/*
+Sample : remove the comment and start adding your own custom CSS rules.
+
+body {
+	background-color:#fff;
+}
+
+*/
+
+/* Append icon to links that open in a new tab */
+/* a[target="_blank"]:after {
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+  margin: 0px 3px 0px 5px;
+} */
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-none {
+    float: none;
+}
+.display-none {
+    display: none;
+}
+.display-inline {
+    display: inline;
+}
+.display-inline-block {
+    display: inline-block;
+}
+.display-block {
+    display: block;
+}
+/* ================== Breadcrumbs ============================================== */
+	.greydivide {
+		background: #6d7074 !important;
+		background: -moz-linear-gradient(top, #6d7074 0%, #6d7074 35%, #474a4e 100%) !important;
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6d7074), color-stop(35%,#6d7074), color-stop(100%,#474a4e)) !important;
+		background: -webkit-linear-gradient(top, #6d7074 0%,#6d7074 35%,#474a4e 100%) !important;
+		background: -o-linear-gradient(top, #6d7074 0%,#6d7074 35%,#474a4e 100%) !important;
+		background: -ms-linear-gradient(top, #6d7074 0%,#6d7074 35%,#474a4e 100%) !important;
+		background: linear-gradient(to bottom, #6d7074 0%,#6d7074 35%,#474a4e 100%) !important;
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d7074', endColorstr='#474a4e',GradientType=0 ) !important;
+	}
+
+
+#mk-page-introduce {
+    padding: 3px 0 0px 0 ;
+    height: 35px;
+    font-size: 11px;
+}
+#mk-page-introduce #breadcrumbs .breadcrumbs-inner {
+    font-size: 11px;
+    padding-bottom: 0px ;
+	margin-top: -5px ;
+}
+
+#breadcrumbs .breadcrumbs-inner.light-skin {
+    color: #c1dffb;
+}
+#breadcrumbs .breadcrumbs-inner.dark-skin {
+	color: #003f70;
+}
+
+#breadcrumbs {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+	background-color: #C30E2E;
+   	color: #c1dffb;
+	font-size: 11px;
+   	margin: 0px;
+	height: 34px;
+	font-weight: bold;
+    letter-spacing: 1px;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+#breadcrumbs .breadcrumbs-inner {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1110px;
+    margin: 0 auto;
+}
+#breadcrumbs strong {
+	letter-spacing:1px ;
+	font-weight: bold ;
+	font-size: 11px ;
+	color: #003f70 ; 
+	font-weight:700 ;
+}
+
+#breadcrumbs a {
+   	color: rgba(255,255,255,.5) ;
+		text-decoration: none;
+		font-size: 11px ;
+	letter-spacing: 1px ;
+	margin-top:10px ;
+	font-weight:700 ;
+}
+
+#breadcrumbs a:hover {
+	color:rgba(255,255,255,1.0) ;
+}
+
+.page .breadcrumb span {
+	    font-size: 11px ;
+}
+
+.page .breadcrumb {
+	color:#003f70;
+}
+
+
+/* Set  font weight and color for menus on pages, i.e. Join our team */
+/*.widget-sub-navigation ul li.current_page_item a, .widget_nav_menu ul li.current_page_item a, .widget_product_categories ul li.current_page_item a, .woocommerce-MyAccount-navigation ul li.current_page_item a*/
+.widget-sub-navigation ul li.current_page_item a, .widget_nav_menu ul li.current_page_item a
+{
+    text-align: Left;
+    background-color: rgb(0,0,0,0.0);
+    font-weight: 400;
+}
+
+
+/* Remove borders for menus on pages, i.e. Join our team */
+.widget-sub-navigation ul.menu, .widget_nav_menu ul.menu
+{
+    border: hidden;
+      border-style:none;
+}
+
+
+
+/* Below rules turn blog related page items off for custom post types */
+
+/* Single Product Page */
+body.single-product #mk-page-introduce, 
+body.single-product div.featured-image, 
+body.single-product h2.blog-single-title, 
+body.single-product .blog-single-meta, 
+body.single-product .single-social-section, 
+body.single-product .single-post-tags, 
+body.single-product .blog-similar-posts, 
+body.single-product #comments, 
+body.single-product .mk-about-author-wrapper,
+body.single-product #mk-breadcrumbs{
+    display: none;
+}
+
+/* Single Product Page */
+body.single-carrier #mk-page-introduce, 
+body.single-carrier div.featured-image, 
+body.single-carrier h2.blog-single-title, 
+body.single-carrier .blog-single-meta, 
+body.single-carrier .single-social-section, 
+body.single-carrier .single-post-tags, 
+body.single-carrier .blog-similar-posts, 
+body.single-carrier #comments, 
+body.single-carrier .mk-about-author-wrapper,
+body.single-carrier #mk-breadcrumbs{
+    display: none;
+}
+
+
+/* Component: 3 button links */
+.atg-cta-3button
+    {
+    }
+.atg-cta-3button-title
+    {
+    font-size: 28px; 
+    color: #ffffff;
+    }
+.atg-cta-3button-subtext
+    {
+        padding-top:5px;
+     font-size: 20px; 
+     font-weight: 400; 
+    color: #C3002F;
+    }
+.atg-cta-3button-title a
+    {
+    color: #ffffff;
+    font-size: 28px; 
+    font-weight: bold;
+    text-decoration: none;
+    }
+.atg-cta-3button-subtext a
+    {
+        padding-top:5px;
+    font-size: 20px; 
+     font-weight: 300; 
+     text-decoration: none;
+    }
+
+    
+    
+/* Component: ATG Company Info */
+.atg_company-info .company-info-main {
+    padding-right: 70px;
+}
+.atg_company-info .company-info-main p {
+    font-size: 16px;
+    text-align: left;
+}
+.atg_company-info .welcome-title {
+    margin-top: 80px;
+    margin-bottom: 55px;
+}
+.atg_company-info .company-info-main .intro-text p {
+    font-size: 26px !important;
+    font-weight: 300 !important;
+    color: #cecece;
+}
+.atg_company-info .company-info-sidebar h4 {
+    margin: 25px 0 15px;
+    text-transform: none;
+    font-size: 15px;
+}
+.atg_company-info .company-info-sidebar p {
+    margin-bottom: 0;
+}
+.atg_company-info .company-info-sidebar ul.press-releases {    
+    list-style: none;
+    margin-left: 8px;
+}
+.atg_company-info .company-info-sidebar ul.press-releases li {
+    margin-bottom: 20px;
+}
+.atg_company-info .company-info-sidebar ul.press-releases li .svg-inline--fa {
+    margin-left: -19px;
+    margin-right: 5px;
+    color: #ccc;
+}
+
+/* 5/3/2019: Changed .top-nav below to white bar (acj) */
+.top-nav {
+    text-align: right;
+/*  background-color: #003f70; */
+    background-color: #ffffff; 
+    padding-top: 5px;
+    padding-bottom: 4px;
+}
+
+.top-nav a {
+   /* color:#003f70; */
+    margin-left: 20px;
+}
+
+.top-nav a:first-child {
+padding-left:0px;
+/*padding-right:5px;*/
+}
+
+.content-box-content ul
+{
+list-style-type: none;
+
+}
+
+/* Root bullets style */
+ .content-box-content ul li::before {
+    color:#C30E2E ;
+    content: "•";
+    border: none;
+    border-style: none;
+    display: block; 
+    height: 3px;
+    width: 1em;
+    font-size: 1.2rem;
+    font-family: Open Sans, sans-serif;
+    left: -4px;
+    top: 2px;
+    position: relative;
+    margin-left: -10px;
+    margin-right: 10px;
+}
+
+/* Sub-bullets style */
+.content-box-content ul li ul li::before {
+    list-style-type: none;
+    content: "-";
+    color:#C30E2E ;
+    border: none;
+    border-style: none;
+    display: block; 
+    height: 3px;
+    width: 1em;
+    font-size: .9rem;
+    font-weight: 300;
+    font-family: Open Sans, sans-serif;
+    left: -2px;  
+    top: 0px;
+    position: relative;
+    margin-left: -10px;
+    margin-right: 10px;
+}
+
+.content-box-content ul li ul {
+    margin-left: -3px;
+}
+
+/* See the accordion title of each section to blue */ 
+.mk-accordion.fancy-style .mk-accordion-tab
+{
+    color:#004A97;
+}
+
+
+.vc_gitem_row .vc_gitem-col
+{
+        height: 55px;
+    }
+
+
+/* Component: "Products" Page */
+.product-image-col img {
+    width: 500px;
+    height: 315px;
+}
+
+/* masthead padding bottom*/
+.masthead-padding-bottom
+{
+    padding-bottom: 5px;
+    background-color: #c30e2e;
+
+}
+.home #breadcrumbs {
+    display: none;
+}
+
+.add_me_some_padding ::before
+{
+    padding-top:120px;
+}
+
+.mk-tabs .wpb_tabs_nav a
+{    
+    /*color: #004A97;*/
+    color: #00447B;
+}
+
+
+/* Fix for shifted dropdowns in navbar */
+.header-align-center .main-navigation-ul li.no-mega-menu>ul.sub-menu, .header-align-center .mk-grid .main-navigation-ul li.no-mega-menu>ul.sub-menu, .header-align-left .mk-grid .main-navigation-ul li.no-mega-menu>ul.sub-menu, .header-style-2.header-align-center .main-navigation-ul li.no-mega-menu>ul.sub-menu, .header-style-2.header-align-left .main-navigation-ul li.no-mega-menu>ul.sub-menu {
+    left: 0;
+    padding: 0;
+}
+
+a.mk-button {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #c30e2e;
+    padding: 13px 23px;
+    color: white;
+}
+
+/* Component: side menus */
+.widget_nav_menu .widgettitle {
+    font-size: 15px;
+    color: #00447b;
+    font-weight: 600;
+    text-transform: none;
+    text-align: left;
+    padding: 0;
+}
+
+/* h2 overrides for ATG themed page headers */
+.home .ag-page-section h2:first-of-type {
+    text-align: center;
+    color: #69b3e7;
+    font-size: 32px !important;
+    font-weight: 400 !important;
+    padding-bottom: 40px;
+    margin-bottom: 18px;
+}
+
+/* Component: AG Page Section */
+.ag-page-section {
+    padding: 80px 0 !important;
+}
+
+/* Component: AG CTA */
+.ag-cta {
+    margin: 0;
+    width: 100%;
+    display: block;
+    padding: 50px 0 !important;
+    background-color: #fcfcfc;
+    border-top-width: 1px;
+    border-top-color: #f7f7f7;
+    border-top-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #f7f7f7;
+    border-bottom-style: solid;
+}
+.ag-cta .ag-cta_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    min-height: 48px;
+}
+.ag-cta .ag-cta_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    min-height: 48px;
+}
+.ag-cta .mk-button {
+    padding: 15px 23px;
+    font-size: 14px;
+    min-width: 135px;
+    border-color: #c20a2a;
+    background-color: #C30E2E
+    
+}
+.ag-cta .mk-button:hover {
+    color: #c20a2a;
+    background-color: unset;
+}
+.ag-cta h2 {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-weight: 500 !important;
+    font-size: 28px !important;
+    text-align: left;
+    color: #c20a2a;
+}
+.ag-cta.ag-cta--brand {
+    background-color: #C30E2E;
+    border-style: unset;
+}
+.ag-cta.ag-cta--brand h2, .ag-cta.ag-cta--dark h2 {
+    color: white;
+}
+.ag-cta.ag-cta--brand .mk-button {
+    border-color: white !important;
+}
+.ag-cta.ag-cta--brand .mk-button:hover {
+    color: #c20a2a;
+    background-color: white;
+}
+.ag-cta.ag-cta--dark {
+    background-color: #2f2f2f;
+}
+.ag-cta.ag-cta--dark .mk-button {
+    background-color: #c20a2a;
+    border-color: #c20a2a;
+    border-radius: 3px;
+    color: white;
+}
+.ag-cta.ag-cta--dark .mk-button:hover {
+    background-color: white;
+    border-color: white;
+    color: #c20a2a;
+}
+.ag-cta .wpb_button, .wpb_content_element {
+    margin-bottom: 0;
+}
+
+/* Component: AG 3-Button CTA */
+.ag-cta--3button {
+    padding: 45px 0 65px;
+    border-width: 0;
+    background-color: #003865;
+    display: flex;
+    justify-content: center;
+}
+/* Turn off flex for IE */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     /* IE10+ CSS styles go here */
+    .ag-cta--3button {
+        display: block;
+    }
+}
+
+/* Component: 3-button CTA */
+/* Turn flex off for tablets and < */
+@media screen and (max-width: 768px) {
+    .ag-cta--3button {
+        display: block;
+    }
+}
+.ag-cta--3button .ag-cta_content > .vc_column_container {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 100%;
+}
+.ag-cta--3button .ag-cta_button {
+    text-decoration: none;
+}
+.ag-cta--3button .ag-cta_icon-wrapper {
+    background-color: #C30E2E;
+    border-style: unset;
+    border-radius: 50%;
+    font-size: 32px;
+    width: 85px;
+    height: 85px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px 15px 0;
+}
+.ag-cta--3button .ag-cta_icon {
+    width: 32px;
+    height: 32px;
+}
+.ag-cta--3button .ag-cta_icon-title-wrapper {
+    display: inline-block;
+}
+.ag-cta--3button .ag-cta_icon-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+}
+.ag-cta--3button .ag-cta_icon-subtitle {
+    color: #69B3E7;
+    font-weight: bold;
+    font-size: 14px;
+}
+.ag-cta--3button .ag-cta_paragraph {
+    color: white;
+    margin-bottom: 35px;
+    height: 100%;
+}
+.ag-cta--3button .ag-cta_paragraph a {
+    color: #69B3E7;
+    font-weight: bold;
+}
+.ag-cta--3button .ag-cta_paragraph .ag-cta_action-link {
+    position: absolute;
+    bottom: 0;
+    font-size: 18px;
+}
+
+/* Component: "Our Products" Boxes */
+.our-products-boxes #mk-tabs .wpb_tabs_nav a {
+	color:#00447b;
+}
+.our-products-boxes .vc_gitem_row .vc_gitem-col {
+    height: 193px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.our-products-boxes .vc_gitem-zone {
+    background-color: #00447bb3 !important; /* overlay fill color */ 
+    opacity: 1;
+}
+.our-products-boxes .vc_is-hover .vc_gitem-zone {
+    background-color: #C30E2E !important; /* hover fill color */
+}
+.our-products-boxes .vc_gitem-col .vc_gitem-post-data {
+    margin: 0;
+    font-weight: bold;
+}
+
+/* add outlines to links */
+/* .vc_gitem-zone-b {
+    z-index: 3 !important;
+}
+.our-products-boxes .vc_gitem-zone .vc_gitem-post-data a {
+    padding: 13px 23px;
+}
+.our-products-boxes .vc_gitem-zone .vc_gitem-post-data {
+    font-weight: bold;
+    z-index: 5;
+    display: inline-block;
+}
+.our-products-boxes .vc_gitem-zone .vc_gitem-post-data a:hover {
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+} */
+
+/* Blockquotes are ugly*/
+blockquote
+{
+     position: relative;
+     background-color: #ffffff; 
+    /* background-color: rgba(0,0,0,.05); */
+    padding: 15px 15px 15px 71px;
+    }
+
+blockquote:before {
+    position: absolute;
+    background-image:none;
+/*    background-image: url(data:image/svg+xml; utf8, <svg class="mk-svg-icon" xmlns="http://www.w3.org…-181 75t-75 181v32q0 40 28 68t68 28h224q80 0 136 56t56 136z"></path></svg>); */
+/*    content: ""; */
+    display: block;
+    left: 20px;
+    top: 20px;
+    width: 32px;
+    height: 35px;
+}
+
+/* Component: Employees (Executives page) */
+.mk-employees.boxed .item-holder {
+    height: 430px;
+}
+.mk-employees.boxed .team-thumbnail img {
+    position: relative; 
+    border-radius: 0%; 
+}
+
+/* Component: Single Employee */
+.single-employee .theme-content {
+    padding-bottom: 60px;
+}
+
+.single-employee .team-member {
+    color:#00447b;
+}
+
+/*Change color of tabs on pages*/
+#mk-tabs .wpb_tabs_nav a
+{
+    color:#004A97;
+    }
+    
+
+/*Text boxes in tab need seperate styling for bullets*/
+.tabs-text-box ul
+{
+list-style-type: none;
+
+}
+
+ .tabs-text-box-bullet  ul li::before {
+    color:#C30E2E ;
+    content: "•";
+    border: none;
+    border-style: none;
+    display: block; 
+    height: 3px;
+    width: 1em;
+    font-size: 1.2rem;
+    font-family: Open Sans, sans-serif;
+    left: -4px;
+    top: 2px;
+    position: relative;
+    margin-left: -10px;
+    margin-right: 10px;
+}
+
+
+
+
+
+    
+/* Contact us page address displays*/
+.address-state {
+    border-bottom: 2px solid #C3002F;
+    font-weight: 700;
+    font-size:18px;
+    color:#C3002F;
+    padding-bottom:5px;
+    Margin-bottom:15px;
+         padding-top:45px;
+}
+.address-title {
+    font-weight: 700;
+    font-size:14px;
+    color:#00447B;
+
+}
+
+
+.address-address {
+    font-weight: 400;
+   /* font-size:18px;*/
+    color:#C3002F;
+     padding-top:5px;
+
+}
+
+.address-location-phones {
+    font-weight: 400;
+   /* font-size:18px;*/
+    color:#00447B;
+    padding-bottom:15px;
+}
+
+.header-spacing
+{
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+
+.button-red-border
+{
+    border-color: #c30e2e;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.header-links 
+{
+ color:#ffffff; 
+ font-size:18px;
+}
+
+/* Component: Header Right Widget Area */
+#header-right-widget {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+#header-right-widget .menu {
+    list-style-type: none;
+    line-height: normal;
+    margin-bottom: 20px;
+    margin-right: 18px;
+}
+#header-right-widget .menu li.menu-item {
+    display: inline-block;
+    margin-left: 0;
+}
+#header-right-widget .menu li.menu-item:last-child a {
+    border-right-width: 0px;
+}
+#header-right-widget .menu li.menu-item a {
+    text-decoration: none;
+    color: white;
+    border-right-style: solid;
+    border-right-width: 2px;
+    border-color: #69b3e7;
+    padding-left: 7px;
+    padding-right: 10px;
+    height: 12px;
+}
+#header-right-widget .menu li.menu-item a .mk-svg-icon {
+    display:none;
+}
+#header-right-widget #searchform {
+    line-height: normal;
+    right: 0;
+    width: 100%;
+    text-align: right;
+}
+#header-right-widget #searchform input#s {
+    width: 250px;
+    border-width: 0px;
+    background-color: #003865;
+    color: #c2d3e0;
+}
+#header-right-widget #searchform input#s::placeholder {
+    color: #c2d3e0;
+    opacity: .32;
+}
+#header-right-widget #searchform input#s::active {
+    color: gray;
+    background-color: white;
+}
+#header-right-widget #searchform i {
+    position: absolute;
+    top: 28px;
+}
+#header-right-widget #searchform i input.search-button {
+    opacity: 0;
+    z-index: 2;
+    position: absolute;
+    top: 89px;
+    right: 6px;
+    width: 22px;
+}
+#header-right-widget #searchform i svg.mk-svg-icon {
+    z-index: 0;
+    position: absolute;
+    right: 10px;
+    top: 85px;
+    opacity: .25;
+    color: #c2d3e0;
+}
+.linkedin-link:after {
+    position: absolute;
+    content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAASCAYAAAC0EpUuAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAF+mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDUgNzkuMTYzNDk5LCAyMDE4LzA4LzEzLTE2OjQwOjIyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDE5LTEyLTE2VDA5OjM4OjAxLTA1OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOS0xMi0xNlQwOTo1NzowNS0wNTowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAxOS0xMi0xNlQwOTo1NzowNS0wNTowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDowMzNjNjI4YS00ZWZmLWNmNDUtOTY5My0yNzFiOGNkNzVlOTUiIHhtcE1NOkRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDplNzhjNTkzMS05ZjkxLWUwNDQtYjI3Yy01NzVjZDA0OGEyZDMiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpkNDUyMDhhNC0zNzBkLTcwNGYtODdjYy1lMjU4NDk1YWRlZjMiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmQ0NTIwOGE0LTM3MGQtNzA0Zi04N2NjLWUyNTg0OTVhZGVmMyIgc3RFdnQ6d2hlbj0iMjAxOS0xMi0xNlQwOTozODowMS0wNTowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDowMzNjNjI4YS00ZWZmLWNmNDUtOTY5My0yNzFiOGNkNzVlOTUiIHN0RXZ0OndoZW49IjIwMTktMTItMTZUMDk6NTc6MDUtMDU6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE5IChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6w/vXSAAACB0lEQVQ4jX2UP2sVQRTFf2d8r0iwTEAQBKtgoR/BSAhapLWysBDEUhH8CHbWimijYCHYCkKKoJ9DLFSwCBiMf+LO7Myx2N28cd/qwLJ37p9z75k7d5RTeuBSbiL9ANR/mV5w9WckAytAkHTP9tNBqRzjF+AU1aoBhv2UXPm/NVwa9jNDS5euKfZj4EhwF5hPgYjlJECyFl4zgXrDkyDdto1g3XDDVeCI9rFunAQgDNmL/dPuwiwd1vTGldbAdaKavvuMd4ANQLYviyWKk1VNglbyd8M5oADZ8AvYAw6BbcER8ByIhm3g4gRet3KMn3KMblN6llKijZE2xr0c44c2xtW2achNs1NSWssxkmMkp0Sb0oscY8kxuo1xN6XE8IUFD9dVB0CyVwAkvba9btiSDaUg+z7wbYp+qJTj69ednwTSBUvvBLtIVwzYfm/4OsU+1AAD8rgRxd7BXjOEApuEACEkwe+lSmrQutNLlKRQJWtlI3sKD/i7+/9bbZWolG56FOwwdgwSoaqwrWwFKILY71NVaaIbkmx6qWODSgF70ShJc3qluvi5IQ9h1bHM5GM41QMxFDijn33ZW8BLpGI4D5yU9Ar4aHuTRdB1S2dD9z6c6SvKPfgGttXG+Flwenw2U0/cv2yGN8BVwTVDM5P0yKXcQtof+09d7MpmYBU4Iemh7QQcSNr/AytvG0ZicFRNAAAAAElFTkSuQmCC');
+}
+/* li-icon spacing for header (horz) menu */
+header .linkedin-link:after {
+    margin-top: -1px;
+}
+/* li-icon spacing for footer (vert) menu */
+#mk-footer .linkedin-link:after {
+    margin-top: 7px;
+    margin-left: -6px;
+}
+
+/*Tim Keener set style for superscript*/
+.employee_superscript
+{
+    font-weight: bold; 
+    color: #c3002f; 
+    position: relative; 
+    top: -0.5em; 
+    font-size: 80%;    
+}
+
+.employee_name_prior_to_superscript
+{
+    font-size: 22px; 
+    color: #c3002f; 
+    font-weight: bold; 
+    text-transform: none;
+}
+
+
+/*Setting dropdown fields padding for formidable forms */
+/*.frm_form_field select*/
+#field_z53qs_state
+{
+padding: 5px 9px 3px !important;
+}
+
+#field_m2ki7
+{
+padding: 5px 9px 3px !important;
+}
+
+#field_ai8u0
+{
+padding: 5px 9px 3px !important;
+}
+
+
+.image-holder {
+    display:inline-block;
+    position: relative;
+}
+.image-holder:after {
+    content:'';
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    background: blue;
+    opacity: 0.1;
+}
+.image-holder:hover:after {
+    opacity: 0;
+}
+
+.our-products-boxes-tim
+{
+  position: relative;
+  background-color: violet;
+}
+
+.our-products-boxes-tim:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: all 0.8s;
+  opacity: .7;
+  background-color: #00447b;
+  background-size: 100% 100%;
+}
+
+
+.our-products-boxes-tim:hover:before
+{
+  opacity: 1;
+   background-color: #c3002f;
+}
+
+ 
+
+.our-product-link
+{
+    text-align: center;
+    color: #fff; 
+    position: relative;
+    bottom: 100px;
+    left: 56px;
+    font-size: 16px;
+ 
+    
+}
+
+.our-product-link:a
+{
+     text-align: center;
+    color: #fff; 
+    position: relative;
+    bottom: 100px;
+    left: 56px;
+    font-size: 16px;
+ 
+    
+}
+
+
+
+
+/*------Beg------------- atg_product_admitted_comm -----------------------*/
+
+
+
+.ct-new-columns_product{
+    display: flex;
+    /* width: 100%;  */
+     flex-direction: row; 
+     align-items: stretch; 
+     justify-content: center; 
+    /* flex-wrap: wrap; */
+}
+#div_block-247-21 {
+    background-image: linear-gradient(rgba(0,68,123,0.7),rgba(0,68,123,0.7)),url(../../uploads/2020/01/auto-dealerships-smallb.jpg);
+    background-size: auto,cover;
+    width: 253px;
+    height: 197px;
+}
+
+#link-248-21 {
+    width: 253px;
+    height: 197px;
+    transition-duration: 1s;
+}
+
+    #link-248-21:hover {
+        background-color: #c30e2e;
+    }
+    
+    
+    #text_block-249-21 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+#div_block-251-21 {
+    background-image: linear-gradient(rgba(0,68,123,0.7),rgba(0,68,123,0.7)),url(../../uploads/2020/01/Auto-Repair-Service-smallB.jpg);
+    background-size: auto,cover;
+    width: 253px;
+    height: 197px;
+}
+
+
+
+#div_block-255-21 {
+    background-image: linear-gradient(rgba(0,68,123,0.7),rgba(0,68,123,0.7)),url(../../uploads/2020/01/Auto-Dismantlers-Salvage-Yards-smallB.jpg);
+    background-size: auto,cover;
+    width: 253px;
+    height: 197px;
+}
+
+#link-252-21 {
+    width: 253px;
+    height: 197px;
+    transition-duration: 1s;
+}
+
+    #link-252-21:hover {
+        background-color: #c30e2e;
+    }
+
+#div_block-259-21 {
+    background-image: linear-gradient(rgba(0,68,123,0.7),rgba(0,68,123,0.7)),url(../../uploads/2020/01/Scrap-Metal-Recycling-smallB.jpg);
+    background-size: auto,cover;
+    width: 253px;
+    height: 197px;
+}
+
+
+#div_block-83-21 {
+    background-image: linear-gradient(rgba(0,68,123,0.7),rgba(0,68,123,0.7)),url(../../uploads/2020/01/Health-Fitness-smallB.jpg);
+    background-size: auto,cover;
+    width: 253px;
+    height: 197px;
+}
+
+
+#div_block-87-21 {
+    background-image: linear-gradient(rgba(0,68,123,0.7),rgba(0,68,123,0.7)),url(../../uploads/2020/01/Energy-smallB.jpg);
+    background-size: auto,cover;
+    width: 253px;
+    height: 197px;
+}
+
+
+#div_block-91-21 {
+    background-image: linear-gradient(rgba(0,68,123,0.7),rgba(0,68,123,0.7)),url(../../uploads/2020/01/Small-Commercial-BOP-smallB.jpg);
+    background-size: auto,cover;
+    width: 253px;
+    height: 197px;
+}
+
+
+#div_block-95-21 {
+    background-image: linear-gradient(rgba(0,68,123,0.7),rgba(0,68,123,0.7)),url(../../uploads/2020/01/Small-Commercial-BOP-Healthcare-Offices-smallB.jpg);
+    background-size: auto,cover;
+    width: 253px;
+    height: 197px;
+}
+
+
+#div_block-173-21 {
+    background-image: linear-gradient(rgba(0,68,123,0.7),rgba(0,68,123,0.7)),url(../../uploads/2020/01/Hospitality-smallB.jpg);
+    background-size: auto,cover;
+    width: 253px;
+    height: 197px;
+}
+
+
+#div_block-177-21 {
+    background-image: linear-gradient(rgba(0,68,123,0.7),rgba(0,68,123,0.7)),url(../../uploads/2020/01/Liquor-Liability-smallB.jpg);
+    background-size: auto,cover;
+    width: 253px;
+    height: 197px;
+}
+
+
+#div_block-181-21 {
+    background-image: linear-gradient(rgba(0,68,123,0.7),rgba(0,68,123,0.7)),url(../../uploads/2020/01/Small-Commercial-Work-Comp-smallB.jpg);
+    background-size: auto,cover;
+    width: 253px;
+    height: 197px;
+}
+
+
+#div_block-185-21 {
+    background-image: linear-gradient(rgba(0,68,123,0.7),rgba(0,68,123,0.7)),url(../../uploads/2020/01/Excess-Work-Comp-smallB.jpg);
+    background-size: auto,cover;
+    width: 253px;
+    height: 197px;
+}
+
+#div_block-237-21 {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+
+#link-256-21 {
+    width: 253px;
+    height: 197px;
+    transition-duration: 1s;
+}
+
+    #link-256-21:hover {
+        background-color: #c30e2e;
+    }
+
+#link-260-21 {
+    width: 253px;
+    height: 197px;
+    transition-duration: 1s;
+}
+
+    #link-260-21:hover {
+        background-color: #c30e2e;
+    }
+
+#link-84-21 {
+    width: 253px;
+    height: 197px;
+    transition-duration: 1s;
+}
+
+    #link-84-21:hover {
+        background-color: #c30e2e;
+    }
+
+#link-88-21 {
+    width: 253px;
+    height: 197px;
+    transition-duration: 1s;
+}
+
+    #link-88-21:hover {
+        background-color: #c30e2e;
+    }
+
+#link-92-21 {
+    width: 253px;
+    height: 197px;
+    transition-duration: 1s;
+}
+
+    #link-92-21:hover {
+        background-color: #c30e2e;
+    }
+
+#link-96-21 {
+    width: 253px;
+    height: 197px;
+    transition-duration: 1s;
+}
+
+    #link-96-21:hover {
+        background-color: #c30e2e;
+    }
+
+#link-174-21 {
+    width: 253px;
+    height: 197px;
+    transition-duration: 1s;
+}
+
+    #link-174-21:hover {
+        background-color: #c30e2e;
+    }
+
+#link-178-21 {
+    width: 253px;
+    height: 197px;
+    transition-duration: 1s;
+}
+
+    #link-178-21:hover {
+        background-color: #c30e2e;
+    }
+
+#link-182-21 {
+    width: 253px;
+    height: 197px;
+    transition-duration: 1s;
+}
+
+    #link-182-21:hover {
+        background-color: #c30e2e;
+    }
+
+#link-186-21 {
+    width: 253px;
+    height: 197px;
+    transition-duration: 1s;
+}
+
+    #link-186-21:hover {
+        background-color: #c30e2e;
+    }
+
+
+#text_block-243-21 {
+    color: #69b3e7;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+
+
+#text_block-253-21 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#text_block-257-21 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#text_block-261-21 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#text_block-85-21 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#text_block-89-21 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#text_block-93-21 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#text_block-97-21 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#text_block-175-21 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#text_block-179-21 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#text_block-183-21 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#text_block-187-21 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/*
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+*/
+.ct-div-block_product {
+display:flex;
+flex-wrap:nowrap;
+flex-direction:column;
+align-items:flex-start;
+    margin: 1.75px;
+}
+
+
+.ct-link {
+display:flex;
+flex-wrap:wrap;
+text-align:center;
+text-decoration:none;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+}
+
+
+
+/*------Beg------------- atg_product_Excess -----------------------*/
+
+
+.ct-new-columns_product{
+    display: flex;
+    /* width: 100%;  */
+     flex-direction: row; 
+     align-items: stretch; 
+     justify-content: center; 
+    /* flex-wrap: wrap; */
+}
+
+
+
+#div_block-101-21 {
+    background-image: linear-gradient(rgba(0,68,123,0.7),rgba(0,68,123,0.7)),url(../../uploads/2020/01/General-Liability-Products-small.jpg);
+    background-size: auto,cover;
+    width: 253px;
+    height: 197px;
+}
+
+
+#div_block-105-21 {
+    background-image: linear-gradient(rgba(0,68,123,0.7),rgba(0,68,123,0.7)),url(../../uploads/2020/01/commercial-property-small.jpg);
+    background-size: auto,cover;
+    width: 253px;
+    height: 197px;
+}
+
+
+#div_block-109-21 {
+    background-image: linear-gradient(rgba(0,68,123,0.7),rgba(0,68,123,0.7)),url(../../uploads/2020/01/Inland-Marine-small.jpg);
+    background-size: auto,cover;
+    width: 253px;
+    height: 197px;
+}
+
+
+#div_block-113-21 {
+    background-image: linear-gradient(rgba(0,68,123,0.7),rgba(0,68,123,0.7)),url(../../uploads/2020/01/environmental-small.jpg);
+    background-size: auto,cover;
+    width: 253px;
+    height: 197px;
+}
+
+
+#div_block-118-21 {
+    background-image: linear-gradient(rgba(0,68,123,0.7),rgba(0,68,123,0.7)),url(../../uploads/2020/01/Garage-Auto-Dealers-small.jpg);
+    background-size: auto,cover;
+    width: 253px;
+    height: 197px;
+}
+
+
+#div_block-122-21 {
+    background-image: linear-gradient(rgba(0,68,123,0.7),rgba(0,68,123,0.7)),url(../../uploads/2020/01/Ocean-Marine-small.jpg);
+    background-size: auto,cover;
+    width: 253px;
+    height: 197px;
+}
+
+
+#div_block-126-21 {
+    background-image: linear-gradient(rgba(0,68,123,0.7),rgba(0,68,123,0.7)),url(../../uploads/2020/01/Excess-Umbrella-small.jpg);
+    background-size: auto,cover;
+    width: 253px;
+    height: 197px;
+}
+
+
+
+
+#link-102-21 {
+    width: 253px;
+    height: 197px;
+    transition-duration: 1s;
+}
+
+    #link-102-21:hover {
+        background-color: #c30e2e;
+    }
+
+#link-106-21 {
+    width: 253px;
+    height: 197px;
+    transition-duration: 1s;
+}
+
+    #link-106-21:hover {
+        background-color: #c30e2e;
+    }
+
+#link-110-21 {
+    width: 253px;
+    height: 197px;
+    transition-duration: 1s;
+}
+
+    #link-110-21:hover {
+        background-color: #c30e2e;
+    }
+
+#link-114-21 {
+    width: 253px;
+    height: 197px;
+    transition-duration: 1s;
+}
+
+    #link-114-21:hover {
+        background-color: #c30e2e;
+    }
+
+#link-119-21 {
+    width: 253px;
+    height: 197px;
+    transition-duration: 1s;
+}
+
+    #link-119-21:hover {
+        background-color: #c30e2e;
+    }
+
+#link-123-21 {
+    width: 253px;
+    height: 197px;
+    transition-duration: 1s;
+}
+
+    #link-123-21:hover {
+        background-color: #c30e2e;
+    }
+
+#link-127-21 {
+    width: 253px;
+    height: 197px;
+    transition-duration: 1s;
+}
+
+    #link-127-21:hover {
+        background-color: #c30e2e;
+    }
+
+
+
+
+#text_block-103-21 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#text_block-107-21 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#text_block-111-21 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#text_block-115-21 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#text_block-120-21 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#text_block-124-21 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#text_block-128-21 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+/*
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+*/
+.ct-div-block_product {
+display:flex;
+flex-wrap:nowrap;
+flex-direction:column;
+align-items:flex-start;
+    margin: 1.75px;
+}
+
+
+.ct-link {
+display:flex;
+flex-wrap:wrap;
+text-align:center;
+text-decoration:none;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+}
+
+/*------End---------- atg_product_Excess -----------------------*/
+
+/*------Beg---------- atg_Mantra -----------------------*/
+
+/* Component: AG mantra */
+
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+#section {
+    display: block;
+}
+
+
+        .ct-section-mantra {
+            width: 100%;
+            background-size: cover;
+            background-repeat: repeat;
+        }
+
+.ct-section-mantra>.ct-section-inner-wrap-mantra {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ct-section-inner-wrap-mantra {
+    padding-top: 75px;
+    padding-right: 20px;
+    padding-bottom: 75px;
+    padding-left: 20px;
+}
+.ct-section-inner-wrap, .oxy-header-container {
+    max-width: 1120px;
+}
+.ct-section-inner-wrap {
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+.ct-new-columns-mantra {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.ct-new-columns-mantra > .ct-div-block {
+    padding: 20px;
+}
+
+.ct-div-block-mantra {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: flex-start;
+width: 33.33%;
+}
+
+.ct-image-mantra {
+    max-width: 100%;
+        height: auto;
+    vertical-align: top;
+}
+#img {
+    border-style: none;
+}
+
+
+
+#section-mantra > .ct-section-inner-wrap {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    align-items: center;
+}
+
+
+/*------End---------- atg_Mantra -----------------------*/
+/*------Beg---------- atg_Carriers -----------------------*/
+
+
+/*------End---------- atg_Carriers -----------------------*/
+
+/* Popup-Builder styles */
+.sgpb-popup-overlay {
+    opacity: .8 !important;
+}
+.sgpb-content {
+    padding: 57px 50px 40px 50px !important;
+}
+/* /Popup-Builder styles */
+
+
+#coronavirus-message {
+    position: absolute;
+    line-height: 55px;
+    right: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+#coronavirus-message:before {
+    top: 89px;
+    color: #ffd122;
+    color: black;
+    border: 1px solid black;
+    position: absolute;
+    content: "i";
+    left: -25px;
+    background-color: white;
+    border-radius: 15px;
+    font-weight: bold;
+    display: none;
+}
+#coronavirus-message, #coronavirus-message-mobile {
+    color: #a2dbff; /* light-blue */
+    /* color: #ffd122; */ /* yellow/orange */
+}
+#coronavirus-message:hover {
+    color: white;
+}
+
+/* Remove extra line spacing on content-box h2's only */
+.mk-content-box .content-box-heading > h2 {
+  margin: 0;
+  line-height: 1.66em;
+  font-size: 16px;
+}
